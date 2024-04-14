@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-Render</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #cccccc;
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Co-Render</h1>
+        <form id="renderForm">
+            <div class="form-group">
+                <label for="blenderFile">Blender File (.blend)</label>
+                <input type="file" id="blenderFile" name="blenderFile" accept=".blend">
+            </div>
+            <div class="form-group">
+                <label for="resolution">Resolution</label>
+                <select id="resolution" name="resolution">
+                    <option value="480p">480p</option>
+                    <option value="720p">720p</option>
+                    <option value="1080p">1080p</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Render</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
